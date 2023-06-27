@@ -9,6 +9,8 @@
 #include <string>
 #include "Stash.hpp"
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Starting\n";
@@ -19,6 +21,16 @@ int main(int argc, const char * argv[]) {
     
     for (int index =0; index < stash.count(); index++) {
         std::cout << (char*) stash.fetch(index) << std::endl;
+    }
+    
+    // Using an int stash now
+    Stash intStash(sizeof(int));
+    for (int index = 0; index < 10; index++) {
+        intStash.add(&index);
+    }
+    
+    for (int index = 0; index < 10; index++) {
+        std::cout << *(int*) intStash.fetch(index) << std::endl;
     }
     return 0;
 }
