@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA5901672A4A3F3200701DC6 /* Stash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stash.hpp; sourceTree = "<group>"; };
 		DA840FC52A4A3AE6004C266A /* CppExercise1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppExercise1; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA840FC82A4A3AE6004C266A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DA840FD22A4A3DBE004C266A /* Stash.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stash.cpp; sourceTree = "<group>"; };
+		DAE0F27B2A4CD53600C516E0 /* Stash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Stash.hpp; path = include/Stash.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		DA840FC72A4A3AE6004C266A /* CppExercise1 */ = {
 			isa = PBXGroup;
 			children = (
-				DA5901672A4A3F3200701DC6 /* Stash.hpp */,
+				DAE0F27B2A4CD53600C516E0 /* Stash.hpp */,
 				DA840FC82A4A3AE6004C266A /* main.cpp */,
 				DA840FD22A4A3DBE004C266A /* Stash.cpp */,
 			);
@@ -248,8 +248,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLYGB465CT;
 				ENABLE_HARDENED_RUNTIME = YES;
-				"HEADER_SEARCH_PATHS[sdk=macosx*][arch=arm64]" = include;
+				"HEADER_SEARCH_PATHS[arch=arm64]" = "$(SRCROOT)/CppExercise1/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=arm64]" = "$(SRCROOT)/CppExercise1/include";
 			};
 			name = Debug;
 		};
@@ -260,7 +261,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLYGB465CT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"HEADER_SEARCH_PATHS[arch=arm64]" = "$(SRCROOT)/CppExercise1/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/CppExercise1/include";
 			};
 			name = Release;
 		};

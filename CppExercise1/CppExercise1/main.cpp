@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "Stash.hpp"
+#include <Stash.hpp>
 
 using namespace std;
 
