@@ -4,7 +4,10 @@ OBJS =		main.o Stash.o StashMkII.o
 
 LIBS =
 
-TARGET =	HelloWorld
+TARGET =	HelloWorld.exe
+
+%.o: %.cxx
+	$(CXX) $(INCLUDES) -c $(input) -o $(output)
 
 $(TARGET):	$(OBJS)
 	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
