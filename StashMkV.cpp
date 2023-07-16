@@ -1,7 +1,6 @@
-#include "StashMkV.hpp"
+#include <StashMkV.hpp>
 #include <cstring>
 #include <cstdlib>
-#include <cstdio>
 
 StashMkV::StashMkV(int size, int initQuantity) {
     size_ = size;

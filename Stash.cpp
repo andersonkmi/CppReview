@@ -1,7 +1,6 @@
 
-#include "Stash.hpp"
+#include <Stash.hpp>
 #include <cstdlib>
-#include <cstdio>
 #include <cstring>
 
 Stash::Stash(int size) {

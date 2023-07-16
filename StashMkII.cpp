@@ -1,7 +1,6 @@
 
-#include "StashMkII.hpp"
+#include <StashMkII.hpp>
 #include <cstdlib>
-#include <cstdio>
 #include <cstring>
 
 StashMkII::StashMkII(int size) {
