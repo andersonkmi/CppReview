@@ -8,13 +8,13 @@
 
 #include <iostream>
 #include <cstdlib>
-#include "StashMkII.hpp"
+#include "StashMkIV.hpp"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
 	// Creating an int stash object
-	StashMkII* intStash = new StashMkII(sizeof(int));
+	StashMkIV* intStash = new StashMkIV(sizeof(int));
 	for (int i = 0; i < 100; i++) {
 		intStash->add(&i);
 	}
