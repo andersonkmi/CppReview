@@ -31,3 +31,9 @@
 *.out
 *.app
 /.metadata/
+
+.idea/
+CMakeFiles/
+CMakeCache.txt
+cmake-build-debug/
+*.cmake
