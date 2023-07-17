@@ -129,6 +129,30 @@ CppReview.exe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/build
 .PHONY : CppReview.exe/fast
 
+BitVector.o: BitVector.cpp.o
+.PHONY : BitVector.o
+
+# target to build an object file
+BitVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/BitVector.cpp.o
+.PHONY : BitVector.cpp.o
+
+BitVector.i: BitVector.cpp.i
+.PHONY : BitVector.i
+
+# target to preprocess a source file
+BitVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/BitVector.cpp.i
+.PHONY : BitVector.cpp.i
+
+BitVector.s: BitVector.cpp.s
+.PHONY : BitVector.s
+
+# target to generate assembly for a file
+BitVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/BitVector.cpp.s
+.PHONY : BitVector.cpp.s
+
 Stash.o: Stash.cpp.o
 .PHONY : Stash.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppReview.exe"
+	@echo "... BitVector.o"
+	@echo "... BitVector.i"
+	@echo "... BitVector.s"
 	@echo "... Stash.o"
 	@echo "... Stash.i"
 	@echo "... Stash.s"
