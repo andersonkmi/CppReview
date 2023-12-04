@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andersonkmi/Projects/CppReview
+CMAKE_SOURCE_DIR = /Volumes/stuff/Projects/CppReview
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andersonkmi/Projects/CppReview
+CMAKE_BINARY_DIR = /Volumes/stuff/Projects/CppReview
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andersonkmi/Projects/CppReview/CMakeFiles /Users/andersonkmi/Projects/CppReview//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/stuff/Projects/CppReview/CMakeFiles /Volumes/stuff/Projects/CppReview//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andersonkmi/Projects/CppReview/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/stuff/Projects/CppReview/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
