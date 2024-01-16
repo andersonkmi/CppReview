@@ -31,7 +31,7 @@ BitVector::BitVector(unsigned char* init, int size) {
     }
 }
 
-BitVector::BitVector(char *binary) {
+BitVector::BitVector(const char *binary) {
     bits_ = strlen(binary);
     numBytes_ = bits_ / CHAR_BIT;
     if (bits_ % CHAR_BIT) {

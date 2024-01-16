@@ -1,11 +1,11 @@
-#ifndef BITVECTOR_HPP__
-#define BITVECTOR_HPP__
+#ifndef BITVECTOR_HPP_
+#define BITVECTOR_HPP_
 
 class BitVector {
 public:
     BitVector();
-    BitVector(unsigned char* init, int size = 8);
-    BitVector(char* binary);
+    explicit BitVector(unsigned char* init, int size = 8);
+    explicit BitVector(const char* binary);
     ~BitVector();
     void set(int bit);
     void clear(int bit);

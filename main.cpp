@@ -6,7 +6,7 @@ using namespace std;
 
 void executeStash() {
     // Creating an int stash object
-    StashMkIV* intStash = new StashMkIV(sizeof(int));
+    auto* intStash = new StashMkIV(sizeof(int));
     for (int i = 0; i < 100; i++) {
         intStash->add(&i);
     }
