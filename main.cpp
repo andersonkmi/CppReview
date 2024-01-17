@@ -46,11 +46,7 @@ void bitVectorTest() {
     BitVector bv3((unsigned char* ) 0);
 }
 
-int main(int argc, char* argv[]) {
-    executeStash();
-    bitVectorTest();
-
-    // Include file iostream example
+void fileIostreamExample() {
     char buffer[100];
     {
         ifstream in("main.cpp");
@@ -74,6 +70,13 @@ int main(int argc, char* argv[]) {
         cp +=2;
         std::cout << cp << std::endl;
     }
+}
+
+int main(int argc, char* argv[]) {
+    executeStash();
+    bitVectorTest();
+    // Include file iostream example
+    fileIostreamExample();
 
 	return EXIT_SUCCESS;
 }
