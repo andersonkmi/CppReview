@@ -1,6 +1,7 @@
 #include <iostream>
 #include <StashMkIV.hpp>
 #include <BitVector.hpp>
+#include <fstream>
 
 using namespace std;
 
@@ -48,5 +49,31 @@ void bitVectorTest() {
 int main(int argc, char* argv[]) {
     executeStash();
     bitVectorTest();
+
+    // Include file iostream example
+    char buffer[100];
+    {
+        ifstream in("main.cpp");
+        ofstream out("main.out");
+        int i = 1;
+
+        while (in.get(buffer, 100)) {
+            in.get();
+            std::cout << buffer << std::endl;
+            out << i++ << ": " << buffer << std::endl;
+        }
+    }
+
+    ifstream in("main.out");
+    while(in.getline(buffer, 100)) {
+        char* cp = buffer;
+        while(*cp != ':') {
+            cp++;
+        }
+
+        cp +=2;
+        std::cout << cp << std::endl;
+    }
+
 	return EXIT_SUCCESS;
 }
