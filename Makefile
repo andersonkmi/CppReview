@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Volumes/stuff/Projects/CppReview
+CMAKE_SOURCE_DIR = /Users/andersonkmi/stuff/Projects/CppReview
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Volumes/stuff/Projects/CppReview
+CMAKE_BINARY_DIR = /Users/andersonkmi/stuff/Projects/CppReview
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/stuff/Projects/CppReview/CMakeFiles /Volumes/stuff/Projects/CppReview//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andersonkmi/stuff/Projects/CppReview/CMakeFiles /Users/andersonkmi/stuff/Projects/CppReview//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/stuff/Projects/CppReview/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andersonkmi/stuff/Projects/CppReview/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -249,6 +249,30 @@ StashMkV.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/StashMkV.cpp.s
 .PHONY : StashMkV.cpp.s
 
+datalog.o: datalog.cpp.o
+.PHONY : datalog.o
+
+# target to build an object file
+datalog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/datalog.cpp.o
+.PHONY : datalog.cpp.o
+
+datalog.i: datalog.cpp.i
+.PHONY : datalog.i
+
+# target to preprocess a source file
+datalog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/datalog.cpp.i
+.PHONY : datalog.cpp.i
+
+datalog.s: datalog.cpp.s
+.PHONY : datalog.s
+
+# target to generate assembly for a file
+datalog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppReview.exe.dir/build.make CMakeFiles/CppReview.exe.dir/datalog.cpp.s
+.PHONY : datalog.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -297,6 +321,9 @@ help:
 	@echo "... StashMkV.o"
 	@echo "... StashMkV.i"
 	@echo "... StashMkV.s"
+	@echo "... datalog.o"
+	@echo "... datalog.i"
+	@echo "... datalog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
