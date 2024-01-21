@@ -72,11 +72,17 @@ void fileIostreamExample() {
     }
 }
 
+void useStreamBuffer() {
+    ifstream in("main.cpp");
+    std::cout << in.rdbuf();
+}
+
 int main(int argc, char* argv[]) {
     executeStash();
     bitVectorTest();
     // Include file iostream example
     fileIostreamExample();
-
+    // Using rdbuf() call
+    useStreamBuffer();
 	return EXIT_SUCCESS;
 }
