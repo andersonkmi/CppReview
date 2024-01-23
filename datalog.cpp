@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <string>
 
+using namespace std;
+
 tm datapoint::Time() {
     return Tm;
 }
@@ -46,5 +48,19 @@ void datapoint::temperature(double t) {
 
 void datapoint::print(std::ostream& os) {
     // Empty still
-    os << "Empty" << std::endl;
+    os.setf(ios::fixed, ios::floatfield);
+    os.precision(4);
+    os.fill('0');
+    os << setw(2) << Time().tm_mon << '\\'
+       << setw(2) << Time().tm_mday << '\\'
+       << setw(2) << Time().tm_year << ' '
+       << setw(2) << Time().tm_hour << ':'
+       << setw(2) << Time().tm_min << ':'
+       << setw(2) << Time().tm_sec;
+    os.fill(' ');
+    os << " Lat:" << setw(9) << latitude()
+       << ", Long:" << setw(9) << longitude()
+       << ", depth:" << setw(9) << depth()
+       << ", temp:" << setw(9) << temperature()
+       << endl;
 }

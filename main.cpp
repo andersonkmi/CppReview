@@ -2,6 +2,8 @@
 #include <StashMkIV.hpp>
 #include <BitVector.hpp>
 #include <fstream>
+#include <stdlib.h>
+#include <datalog.hpp>
 
 using namespace std;
 
@@ -77,6 +79,33 @@ void useStreamBuffer() {
     std::cout << in.rdbuf();
 }
 
+void generateTestData() {
+    ofstream data("data.txt");
+    ofstream bindata("data.bin", ios::binary);
+    time_t timer = time(NULL);
+    srand((unsigned) timer);
+
+    for (int i = 0; i < 100; i++) {
+        datapoint d;
+        d.Time(*localtime(&timer));
+        timer += 55;
+        d.latitude("45*20'31\"");
+        d.longitude("22*34'18\"");
+
+        // Zero to 199 meters:
+        double newdepth = rand() % 200;
+        double fraction = rand() % 100 + 1;
+        newdepth += double(1) / fraction;
+        d.depth(newdepth);
+        double newtemp = 150 + rand() % 200;
+        fraction = rand() % 100 + 1;
+        newtemp += (double) 1 / fraction;
+        d.temperature(newtemp);
+        d.print(data);
+        bindata.write((const char*)&d, sizeof(d));
+    }
+}
+
 int main(int argc, char* argv[]) {
     executeStash();
     bitVectorTest();
@@ -84,5 +113,8 @@ int main(int argc, char* argv[]) {
     fileIostreamExample();
     // Using rdbuf() call
     useStreamBuffer();
+
+    // Generate data
+    generateTestData();
 	return EXIT_SUCCESS;
 }
